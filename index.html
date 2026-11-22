@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riya Sharma | Graphic Designer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-container">
+    <div class="canvas-wrapper">
+      <!-- Full-bleed Living Background Animation Canvas -->
+      <canvas id="animation-canvas"></canvas>
+
+      <!-- Multi-Section Content Overlay -->
+      <div class="content-overlay">
+        <div class="sections-viewport">
+
+          <!-- SECTION 1: ABOUT ME -->
+          <section class="portfolio-section" id="section-about" data-index="0">
+            <div class="section-content split-layout">
+              <div class="text-col">
+                <div class="title-with-doodle">
+                  <h2 class="section-heading">About Me</h2>
+                  <svg class="doodle-heart" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 6C18.5 6 16.5 9 16 10C15.5 9 13.5 6 10 6C5.5 6 2 9.5 2 14C2 20 11 25.5 16 28C21 25.5 30 20 30 14C30 9.5 26.5 6 22 6Z" stroke="#60a5fa" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25 4L26 2M28 5L30 5" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </div>
+
+                <p class="bio-main">
+                  Hi, I'm <strong class="highlight-name">Mukesh J</strong>,Aspiring Software Developer | MCA Student | Python & Java Developer|
+Building meaningful digital experiences through programming, problem-solving, and innovative technology. Passionate about software development, computer vision, and creating practical solutions to real-world challenges.
+                </p>
+
+                <div class="script-quote">
+                  <span>Let's create something amazing!</span>
+                  <svg class="swoosh-underline" viewBox="0 0 160 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9C45 3 115 3 157 10" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Right space reserved for canvas animation visual -->
+              <div class="visual-col-hint"></div>
+            </div>
+          </section>
+
+          <!-- SECTION 2: MY SKILLS -->
+          <section class="portfolio-section" id="section-skills" data-index="1">
+            <div class="section-content split-layout">
+              <div class="skills-col">
+                <h2 class="section-heading">My Skills</h2>
+
+                <div class="skills-grid">
+                  <!-- Python -->
+                  <div class="skill-card">
+                    <div class="skill-icon icon-python">
+                      <svg viewBox="0 0 128 128" class="python-svg" width="30" height="30">
+                        <path fill="#38bdf8" d="M63.7 3.5c-16 0-25 7.1-25 16.5v12.2h25.4v3.6H26.3c-9.5 0-17.7 5.7-20.3 16.3-3 12.2-3.1 19.8 0 32.5 2.3 9.4 7.7 16.3 17.2 16.3h9.8v-13.8c0-10.7 9.2-20.1 20.3-20.1h25.1v-23c0-9.2-7.7-16.5-16.7-16.5h-18v-8.1c0-8.8 7.3-15.9 16.5-15.9h28.7c8.8 0 15.9 7.3 15.9 15.9v8.1h-16.5v3.6h28.7c9.5 0 17.7-5.7 20.3-16.3 3-12.2 3.1-19.8 0-32.5-2.3-9.4-7.7-16.3-17.2-16.3H63.7zm-13.8 9.9c3 0 5.4 2.4 5.4 5.4s-2.4 5.4-5.4 5.4-5.4-2.4-5.4-5.4 2.4-5.4 5.4-5.4z"/>
+                        <path fill="#facc15" d="M64.3 124.5c16 0 25-7.1 25-16.5v-12.2H63.9v-3.6h37.8c9.5 0 17.7-5.7 20.3-16.3 3-12.2 3.1-19.8 0-32.5-2.3-9.4-7.7-16.3-17.2-16.3h-9.8v13.8c0 10.7-9.2 20.1-20.3 20.1H49.6v23c0 9.2 7.7 16.5 16.7 16.5h18v8.1c0 8.8-7.3 15.9-16.5 15.9H39.1c-8.8 0-15.9-7.3-15.9-15.9v-8.1h16.5v-3.6H11c-9.5 0-17.7 5.7-20.3 16.3-3 12.2-3.1 19.8 0 32.5 2.3 9.4 7.7 16.3 17.2 16.3h73.6zm13.8-9.9c-3 0-5.4-2.4-5.4-5.4s2.4-5.4 5.4-5.4 5.4 2.4 5.4 5.4-2.4 5.4-5.4 5.4z"/>
+                      </svg>
+                    </div>
+                    <span class="skill-name">Python</span>
+                  </div>
+
+                  <!-- Web Development -->
+                  <div class="skill-card">
+                    <div class="skill-icon icon-webdev">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+                        <polyline points="16 18 22 12 16 6"/>
+                        <polyline points="8 6 2 12 8 18"/>
+                        <line x1="14" y1="4" x2="10" y2="20" stroke="#818cf8"/>
+                      </svg>
+                    </div>
+                    <span class="skill-name">Web Development</span>
+                  </div>
+
+                  <!-- Computer Vision & AI -->
+                  <div class="skill-card">
+                    <div class="skill-icon icon-cvai">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/>
+                        <circle cx="12" cy="12" r="3" fill="#a855f7" stroke="#e9d5ff" stroke-width="1.5"/>
+                        <circle cx="12" cy="2" r="1.5" fill="#38bdf8"/>
+                        <circle cx="12" cy="22" r="1.5" fill="#38bdf8"/>
+                        <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="#38bdf8" stroke-width="1.5"/>
+                      </svg>
+                    </div>
+                    <span class="skill-name">Computer Vision & AI</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Side Statement -->
+              <div class="tagline-col">
+                <div class="tagline-divider"></div>
+                <div class="tagline-content">
+                  <div class="sparkle-top">
+                    <svg viewBox="0 0 24 24" fill="#60a5fa" class="sparkle-icon">
+                      <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="#93c5fd" class="sparkle-icon-sm">
+                      <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+                    </svg>
+                  </div>
+                  <h3 class="tagline-text">
+                    <span>Design</span>
+                    <span>Create</span>
+                    <span>Inspire</span>
+                  </h3>
+                  <svg class="swoosh-underline" viewBox="0 0 140 14" fill="none">
+                    <path d="M2 9C40 2 100 2 138 10" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 3: MY PROJECTS -->
+          <section class="portfolio-section" id="section-projects" data-index="2">
+            <div class="section-content full-width-layout">
+              <div class="heading-with-sparkles">
+                <h2 class="section-heading">My Projects</h2>
+                <div class="droplet-sparkles">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+
+              <div class="projects-cards-row">
+                <!-- Project 1: Mini Core Banking -->
+                <div class="project-card">
+                  <div class="project-thumb thumb-banking">
+                    <div class="banking-preview">
+                      <div class="banking-chip-row">
+                        <svg viewBox="0 0 24 24" fill="none" class="chip-svg" stroke="#38bdf8" stroke-width="1.8">
+                          <rect x="2" y="5" width="20" height="14" rx="3"/>
+                          <line x1="2" y1="10" x2="22" y2="10"/>
+                        </svg>
+                        <span class="banking-badge">CORE BANK</span>
+                      </div>
+                      <div class="banking-balance-box">
+                        <span class="balance-lbl">Available Balance</span>
+                        <h4 class="balance-amt">$48,250.00</h4>
+                      </div>
+                      <div class="banking-actions">
+                        <span class="action-pill">Transfer</span>
+                        <span class="action-pill">Deposit</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Mini Core Banking</h3>
+                    <span class="project-tag">Fintech & Banking</span>
+                  </div>
+                </div>
+
+                <!-- Project 2: Gesture Control Virtual Mouse -->
+                <div class="project-card">
+                  <div class="project-thumb thumb-gesture">
+                    <div class="gesture-preview">
+                      <div class="hand-tracking-hud">
+                        <svg viewBox="0 0 80 80" fill="none" class="hand-svg">
+                          <!-- Palm & Finger Landmarks -->
+                          <circle cx="40" cy="50" r="14" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="3 3"/>
+                          <circle cx="40" cy="50" r="3" fill="#a855f7"/>
+                          <path d="M40 50L25 32M40 50L36 20M40 50L45 22M40 50L54 27M40 50L58 40" stroke="#c084fc" stroke-width="1.8" stroke-linecap="round"/>
+                          <circle cx="25" cy="32" r="3" fill="#38bdf8"/>
+                          <circle cx="36" cy="20" r="3.5" fill="#f43f5e"/>
+                          <circle cx="45" cy="22" r="3" fill="#38bdf8"/>
+                          <circle cx="54" cy="27" r="3" fill="#38bdf8"/>
+                          <circle cx="58" cy="40" r="3" fill="#38bdf8"/>
+                          <!-- Cursor Target -->
+                          <circle cx="36" cy="14" r="5" stroke="#38bdf8" stroke-width="1.5"/>
+                          <line x1="36" y1="6" x2="36" y2="22" stroke="#38bdf8" stroke-width="1"/>
+                          <line x1="28" y1="14" x2="44" y2="14" stroke="#38bdf8" stroke-width="1"/>
+                        </svg>
+                        <span class="hud-coords">TRACKING: AI MOUSE</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Gesture Virtual Mouse</h3>
+                    <span class="project-tag">Computer Vision & AI</span>
+                  </div>
+                </div>
+
+                <!-- Project 3: Weather API -->
+                <div class="project-card">
+                  <div class="project-thumb thumb-weather">
+                    <div class="weather-preview">
+                      <div class="weather-icon-wrap">
+                        <svg viewBox="0 0 48 48" fill="none" class="weather-svg">
+                          <!-- Radiant Sun + Cloud -->
+                          <circle cx="20" cy="18" r="8" fill="#fbbf24"/>
+                          <path d="M14 34H36C39.3 34 42 31.3 42 28C42 24.9 39.7 22.4 36.7 22.1C35.8 17.5 31.8 14 27 14C22.6 14 18.9 17 17.6 21.1C14.5 21.6 12 24.3 12 27.5C12 31.1 14.9 34 18.5 34Z" fill="#38bdf8" fill-opacity="0.85"/>
+                        </svg>
+                      </div>
+                      <div class="weather-temp-box">
+                        <span class="weather-temp">24°C</span>
+                        <span class="weather-city">Real-Time Forecast</span>
+                      </div>
+                      <div class="weather-details-row">
+                        <span>HUM 65%</span>
+                        <span>WIND 14km/h</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Weather API</h3>
+                    <span class="project-tag">REST API & Web App</span>
+                  </div>
+                </div>
+
+                <!-- Project 4: Expense Tracker -->
+                <div class="project-card">
+                  <div class="project-thumb thumb-expense">
+                    <div class="expense-preview">
+                      <div class="expense-chart-circle">
+                        <svg viewBox="0 0 60 60" class="donut-chart-svg">
+                          <circle cx="30" cy="30" r="22" stroke="rgba(255,255,255,0.1)" stroke-width="7" fill="none"/>
+                          <circle cx="30" cy="30" r="22" stroke="#38bdf8" stroke-width="7" stroke-dasharray="75 138" stroke-dashoffset="0" fill="none"/>
+                          <circle cx="30" cy="30" r="22" stroke="#c084fc" stroke-width="7" stroke-dasharray="35 138" stroke-dashoffset="-75" fill="none"/>
+                          <circle cx="30" cy="30" r="22" stroke="#10b981" stroke-width="7" stroke-dasharray="28 138" stroke-dashoffset="-110" fill="none"/>
+                        </svg>
+                        <span class="donut-text">-$1,240</span>
+                      </div>
+                      <div class="expense-bars">
+                        <div class="exp-bar"><span class="bar-fill" style="width: 75%"></span></div>
+                        <div class="exp-legend"><span>Food</span><span>Bills</span><span>Savings</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">Expense Tracker</h3>
+                    <span class="project-tag">Finance & Analytics</span>
+                  </div>
+                </div>
+
+                <!-- Project 5: School Management System -->
+                <div class="project-card">
+                  <div class="project-thumb thumb-school">
+                    <div class="school-preview">
+                      <div class="school-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="cap-svg">
+                          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                          <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        <span class="school-badge">PORTAL</span>
+                      </div>
+                      <div class="school-stats-card">
+                        <div class="stat-pill"><span>Students</span><strong>1,450</strong></div>
+                        <div class="stat-pill"><span>Attendance</span><strong style="color: #34d399">98%</strong></div>
+                      </div>
+                      <div class="school-actions-row">
+                        <span class="action-tag">Grades</span>
+                        <span class="action-tag">Schedule</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <h3 class="project-title">School Management</h3>
+                    <span class="project-tag">Database & Portal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 4: EXPERIENCE -->
+          <section class="portfolio-section" id="section-experience" data-index="3">
+            <div class="section-content split-layout">
+              <div class="timeline-col">
+                <div class="title-with-dash">
+                  <h2 class="section-heading">Experience</h2>
+                  <div class="heading-dash"></div>
+                </div>
+
+                <div class="timeline-items">
+                  <!-- Entry 1: Internship at Valcom IT Services -->
+                  <div class="timeline-entry">
+                    <div class="timeline-marker marker-active"></div>
+                    <div class="timeline-body">
+                      <div class="role-badge-row">
+                        <h3 class="entry-role">Software Developer</h3>
+                        <span class="intern-pill">Internship</span>
+                      </div>
+                      <p class="entry-meta">Valcom IT Services</p>
+                      <p class="entry-desc">
+                        Developing scalable software solutions, writing clean modular code, building responsive web interfaces, and collaborating on API integrations.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Entry 2: Fresher Status -->
+                  <div class="timeline-entry">
+                    <div class="timeline-marker marker-fresher"></div>
+                    <div class="timeline-body">
+                      <div class="role-badge-row">
+                        <h3 class="entry-role">Fresher Developer</h3>
+                        <span class="fresher-pill">Available</span>
+                      </div>
+                      <p class="entry-meta">Entry-Level Software Engineer • 2024</p>
+                      <p class="entry-desc">
+                        Motivated fresher with practical skills in Python, Web Development, Computer Vision & AI, eager to contribute to impactful engineering teams.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Developer Terminal / Tech Showcase -->
+              <div class="dev-terminal-col">
+                <div class="developer-terminal-card">
+                  <div class="terminal-header">
+                    <div class="terminal-dots">
+                      <span class="t-dot dot-red"></span>
+                      <span class="t-dot dot-yellow"></span>
+                      <span class="t-dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">valcom-dev@workspace: ~</span>
+                  </div>
+                  <div class="terminal-body">
+                    <p class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat experience.json</span></p>
+                    <pre class="term-json">{
+  <span class="json-key">"status"</span>: <span class="json-str">"Fresher"</span>,
+  <span class="json-key">"role"</span>: <span class="json-str">"Software Developer"</span>,
+  <span class="json-key">"internship"</span>: <span class="json-str">"Valcom IT Services"</span>,
+  <span class="json-key">"tech_stack"</span>: [
+    <span class="json-str">"Python"</span>,
+    <span class="json-str">"Web Dev"</span>,
+    <span class="json-str">"Computer Vision & AI"</span>
+  ],
+  <span class="json-key">"available_for_hire"</span>: <span class="json-bool">true</span>
+}</pre>
+                    <p class="term-line term-cursor"><span class="term-prompt">$</span> <span class="cursor-blink">_</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 5: SERVICES -->
+          <section class="portfolio-section" id="section-services" data-index="4">
+            <div class="section-content full-width-layout">
+              <div class="title-with-dash">
+                <h2 class="section-heading">Services</h2>
+                <div class="heading-dash"></div>
+                <div class="droplet-sparkles">
+                  <span></span><span></span>
+                </div>
+              </div>
+
+              <div class="services-grid">
+                <!-- Service 1: Brand Design -->
+                <div class="service-card">
+                  <div class="service-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m12 19 7-7 3 3-7 7-3-3z"/>
+                      <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                      <path d="m2 2 7.586 7.586"/>
+                      <circle cx="11" cy="11" r="2"/>
+                    </svg>
+                  </div>
+                  <h3 class="service-label">Web<br>Design</h3>
+                </div>
+
+                <!-- Service 2: Social Media Design -->
+                <div class="service-card">
+                  <div class="service-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="3" width="20" height="14" rx="2"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                  </div>
+                  <h3 class="service-label">Debugging <br>& Maintenance</h3>
+                </div>
+
+                <!-- Service 3: UI/UX Design -->
+                <div class="service-card">
+                  <div class="service-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2"/>
+                      <path d="M3 9h18"/>
+                      <path d="M9 21V9"/>
+                    </svg>
+                  </div>
+                  <h3 class="service-label">Deployment<br>& Cloud Services</h3>
+                </div>
+
+                <!-- Service 4: Print Design -->
+                <div class="service-card">
+                  <div class="service-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="13.5" cy="6.5" r=".5" fill="#93c5fd"/>
+                      <circle cx="17.5" cy="10.5" r=".5" fill="#93c5fd"/>
+                      <circle cx="8.5" cy="7.5" r=".5" fill="#93c5fd"/>
+                      <circle cx="6.5" cy="12.5" r=".5" fill="#93c5fd"/>
+                      <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 2 6.5 5 7.5.5.2.8.7.8 1.2 0 1.2 1 2.3 2.2 2.3 2 0 4-2 4-4 0-1.1.9-2 2-2h1c4.4 0 8-3.6 8-8 0-5-4-9-9-9z"/>
+                    </svg>
+                  </div>
+                  <h3 class="service-label">Print<br>Design</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 6: LET'S WORK TOGETHER! -->
+          <section class="portfolio-section" id="section-contact" data-index="5">
+            <div class="section-content split-layout contact-layout">
+              <div class="contact-left">
+                <div class="cta-heading-wrap">
+                  <h2 class="cta-heading">
+                    Let's Work<br>Together!
+                  </h2>
+                  <svg viewBox="0 0 24 24" fill="#60a5fa" class="sparkle-cta">
+                    <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+                  </svg>
+                  <svg class="swoosh-underline cta-swoosh" viewBox="0 0 160 14" fill="none">
+                    <path d="M3 9C45 2 115 2 157 10" stroke="#60a5fa" stroke-width="2.8" stroke-linecap="round"/>
+                  </svg>
+                </div>
+
+                <p class="thank-you-note">THANK YOU FOR WATCHING <span class="heart-emoji">♥</span></p>
+              </div>
+
+              <div class="contact-right">
+                <div class="contact-divider"></div>
+                <div class="contact-list">
+                  <!-- Email -->
+                  <a href="mailto:mukeshram2711@gmail.com" class="contact-item">
+                    <div class="contact-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                      </svg>
+                    </div>
+                    <span class="contact-text">mukeshram2711@gmail.com</span>
+                  </a>
+
+                 
+
+                  <!-- Instagram -->
+                  <a href="https://instagram.com/riya.designs" target="_blank" rel="noopener" class="contact-item">
+                    <div class="contact-icon icon-instagram">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                      </svg>
+                    </div>
+                    <span class="contact-text">@mukeshram2711</span>
+                  </a>
+                </div>
+
+                <!-- Heart Flourish Doodle -->
+                <svg class="heart-doodle-ribbon" viewBox="0 0 60 40" fill="none">
+                  <path d="M10 25C5 20 5 10 15 10C22 10 25 18 25 18C25 18 28 10 35 10C45 10 45 20 40 25C32 33 25 36 25 36C25 36 18 33 10 25Z" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M25 36C35 34 50 25 55 18" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 4"/>
+                </svg>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- Quick Section Jump Navigation -->
+      <nav class="section-nav" aria-label="Sections navigation">
+        <button class="nav-dot active" data-target="0" title="About Me">
+          <span class="nav-label">About</span>
+        </button>
+        <button class="nav-dot" data-target="1" title="Skills">
+          <span class="nav-label">Skills</span>
+        </button>
+        <button class="nav-dot" data-target="2" title="Projects">
+          <span class="nav-label">Projects</span>
+        </button>
+        <button class="nav-dot" data-target="3" title="Experience">
+          <span class="nav-label">Experience</span>
+        </button>
+        <button class="nav-dot" data-target="4" title="Services">
+          <span class="nav-label">Services</span>
+        </button>
+        <button class="nav-dot" data-target="5" title="Contact">
+          <span class="nav-label">Contact</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
