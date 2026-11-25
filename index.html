@@ -3,13 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mukesh Portfolio</title>
+  <title>Mukesh J | Software Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Real-Time Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Real-Time HUD Section Indicator -->
+  <div class="scroll-hud" id="scroll-hud" aria-hidden="true">
+    <div class="hud-counter">
+      <span class="hud-num" id="hud-current">01</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-total">06</span>
+    </div>
+    <span class="hud-pill" id="hud-name">About</span>
+  </div>
+
   <div class="scroll-container">
     <div class="canvas-wrapper">
       <!-- Full-bleed Living Background Animation Canvas -->
@@ -40,6 +53,17 @@ Building meaningful digital experiences through programming, problem-solving, an
                   <span>Let's create something amazing!</span>
                   <svg class="swoosh-underline" viewBox="0 0 160 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9C45 3 115 3 157 10" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+
+                <!-- Animated Scroll Indicator Cue -->
+                <div class="scroll-cue" id="scroll-cue">
+                  <div class="mouse-cue">
+                    <span class="mouse-wheel"></span>
+                  </div>
+                  <span class="scroll-cue-text">Scroll to explore</span>
+                  <svg class="scroll-cue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 10l5 5 5-5"/>
                   </svg>
                 </div>
               </div>
@@ -346,7 +370,7 @@ Building meaningful digital experiences through programming, problem-solving, an
           <!-- SECTION 5: SERVICES -->
           <section class="portfolio-section" id="section-services" data-index="4">
             <div class="section-content full-width-layout">
-              <div class="title-with-dash">
+              <div class="heading-with-sparkles">
                 <h2 class="section-heading">Services</h2>
                 <div class="heading-dash"></div>
                 <div class="droplet-sparkles">
@@ -355,67 +379,72 @@ Building meaningful digital experiences through programming, problem-solving, an
               </div>
 
               <div class="services-grid">
-                <!-- Service 1: Brand Design -->
+                <!-- Service 1: Full-Stack Web Development -->
                 <div class="service-card">
-                  <div class="service-icon-wrap">
-                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m12 19 7-7 3 3-7 7-3-3z"/>
-                      <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                      <path d="m2 2 7.586 7.586"/>
-                      <circle cx="11" cy="11" r="2"/>
-                    </svg>
-                  </div>
-                  <h3 class="service-label">Web<br>Design</h3>
-                </div>
-
-                <!-- Service 2: Social Media Design -->
-                <div class="service-card">
-                  <div class="service-icon-wrap">
-                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <div class="service-icon-wrap icon-web">
+                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <rect x="2" y="3" width="20" height="14" rx="2"/>
                       <line x1="8" y1="21" x2="16" y2="21"/>
                       <line x1="12" y1="17" x2="12" y2="21"/>
+                      <path d="m8 9-2 2 2 2"/>
+                      <path d="m16 9 2 2-2 2"/>
                     </svg>
                   </div>
-                  <h3 class="service-label">Debugging <br>& Maintenance</h3>
+                  <h3 class="service-label">Full-Stack<br>Web Dev</h3>
+                  <p class="service-desc">Responsive, dynamic interfaces, modern frontend design, fast loading speeds, and robust API integration.</p>
                 </div>
 
-                <!-- Service 3: UI/UX Design -->
+                <!-- Service 2: Software & API Engineering -->
                 <div class="service-card">
-                  <div class="service-icon-wrap">
-                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="3" y="3" width="18" height="18" rx="2"/>
-                      <path d="M3 9h18"/>
-                      <path d="M9 21V9"/>
+                  <div class="service-icon-wrap icon-software">
+                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="4 17 10 11 4 5"/>
+                      <line x1="12" y1="19" x2="20" y2="19"/>
+                      <circle cx="16" cy="8" r="3" stroke="#818cf8"/>
                     </svg>
                   </div>
-                  <h3 class="service-label">Deployment<br>& Cloud Services</h3>
+                  <h3 class="service-label">Software &<br>API Engineering</h3>
+                  <p class="service-desc">Scalable Python & Java solutions, secure RESTful APIs, clean architecture, and modular backend logic.</p>
                 </div>
 
-                <!-- Service 4: Print Design -->
+                <!-- Service 3: AI & Computer Vision -->
                 <div class="service-card">
-                  <div class="service-icon-wrap">
-                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="13.5" cy="6.5" r=".5" fill="#93c5fd"/>
-                      <circle cx="17.5" cy="10.5" r=".5" fill="#93c5fd"/>
-                      <circle cx="8.5" cy="7.5" r=".5" fill="#93c5fd"/>
-                      <circle cx="6.5" cy="12.5" r=".5" fill="#93c5fd"/>
-                      <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 2 6.5 5 7.5.5.2.8.7.8 1.2 0 1.2 1 2.3 2.2 2.3 2 0 4-2 4-4 0-1.1.9-2 2-2h1c4.4 0 8-3.6 8-8 0-5-4-9-9-9z"/>
+                  <div class="service-icon-wrap icon-cv">
+                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#c084fc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/>
+                      <circle cx="12" cy="12" r="3" fill="#a855f7" stroke="#e9d5ff" stroke-width="1.2"/>
+                      <circle cx="12" cy="2" r="1.5" fill="#38bdf8"/>
+                      <circle cx="12" cy="22" r="1.5" fill="#38bdf8"/>
+                      <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="#38bdf8" stroke-width="1.5"/>
                     </svg>
                   </div>
-                  <h3 class="service-label">Print<br>Design</h3>
+                  <h3 class="service-label">Computer Vision<br>& AI Solutions</h3>
+                  <p class="service-desc">MediaPipe hand tracking, OpenCV vision pipelines, gesture interaction, and intelligent machine automation.</p>
+                </div>
+
+                <!-- Service 4: Database & System Solutions -->
+                <div class="service-card">
+                  <div class="service-icon-wrap icon-cloud">
+                    <svg viewBox="0 0 24 24" fill="none" class="service-svg" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                      <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+                    </svg>
+                  </div>
+                  <h3 class="service-label">Database &<br>System Solutions</h3>
+                  <p class="service-desc">Structured database schema design, system deployment, cloud optimization, and software maintenance.</p>
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- SECTION 6: LET'S WORK TOGETHER! -->
+          <!-- SECTION 6: LET'S WORK TOGETHER / CONTACT -->
           <section class="portfolio-section" id="section-contact" data-index="5">
             <div class="section-content split-layout contact-layout">
               <div class="contact-left">
                 <div class="cta-heading-wrap">
                   <h2 class="cta-heading">
-                    Let's Work<br>Together!
+                    Let's Build<br>Together!
                   </h2>
                   <svg viewBox="0 0 24 24" fill="#60a5fa" class="sparkle-cta">
                     <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
@@ -425,43 +454,70 @@ Building meaningful digital experiences through programming, problem-solving, an
                   </svg>
                 </div>
 
-                <p class="thank-you-note">THANK YOU FOR WATCHING <span class="heart-emoji">♥</span></p>
+                <div class="hire-status-badge">
+                  <span class="status-pulse-dot"></span>
+                  <span class="status-text">Available for Software Developer Roles & Projects</span>
+                </div>
+
+                <p class="contact-intro-text">
+                  Have an opportunity, an idea, or want to collaborate? Feel free to reach out via email, LinkedIn, or check out my work on GitHub.
+                </p>
+
+                <p class="thank-you-note">MUKESH J &bull; SOFTWARE DEVELOPER</p>
               </div>
 
               <div class="contact-right">
                 <div class="contact-divider"></div>
                 <div class="contact-list">
                   <!-- Email -->
-                  <a href="mailto:mukeshram2711@gmail.com" class="contact-item">
-                    <div class="contact-icon">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <a href="mailto:mukeshram2711@gmail.com" class="contact-card">
+                    <div class="contact-icon icon-mail">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="4" width="20" height="16" rx="2"/>
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                       </svg>
                     </div>
-                    <span class="contact-text">mukeshram2711@gmail.com</span>
+                    <div class="contact-info">
+                      <span class="contact-label">Email</span>
+                      <span class="contact-val">mukeshram2711@gmail.com</span>
+                    </div>
+                    <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
                   </a>
 
-                 
-
-                  <!-- Instagram -->
-                  <a href="https://instagram.com/.designs" target="_blank" rel="noopener" class="contact-item">
-                    <div class="contact-icon icon-instagram">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5"/>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  <!-- LinkedIn -->
+                  <a href="www.linkedin.com/in/mukesh-j27" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon icon-linkedin">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                       </svg>
                     </div>
-                    <span class="contact-text">@mukeshram2711</span>
+                    <div class="contact-info">
+                      <span class="contact-label">LinkedIn</span>
+                      <span class="contact-val">linkedin.com/in/mukesh</span>
+                    </div>
+                    <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+
+                  <!-- GitHub -->
+                  <a href="https://github.com/mukeshram-sys" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon icon-github">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                      </svg>
+                    </div>
+                    <div class="contact-info">
+                      <span class="contact-label">GitHub</span>
+                      <span class="contact-val">github.com/mukesh</span>
+                    </div>
+                    <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
                   </a>
                 </div>
-
-                <!-- Heart Flourish Doodle -->
-                <svg class="heart-doodle-ribbon" viewBox="0 0 60 40" fill="none">
-                  <path d="M10 25C5 20 5 10 15 10C22 10 25 18 25 18C25 18 28 10 35 10C45 10 45 20 40 25C32 33 25 36 25 36C25 36 18 33 10 25Z" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M25 36C35 34 50 25 55 18" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 4"/>
-                </svg>
               </div>
             </div>
           </section>

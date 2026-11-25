@@ -14,10 +14,15 @@
 
   const ctx = canvas.getContext('2d', { alpha: false });
 
-  // DOM elements for the 6 sections and navigation dots
+  // DOM elements for the 6 sections, navigation dots, and scroll graphics
   const sections = Array.from(document.querySelectorAll('.portfolio-section'));
   const navDots = Array.from(document.querySelectorAll('.nav-dot'));
+  const progressBar = document.getElementById('scroll-progress');
+  const scrollCue = document.getElementById('scroll-cue');
+  const hudCurrent = document.getElementById('hud-current');
+  const hudName = document.getElementById('hud-name');
   const SECTION_COUNT = sections.length || 6;
+  const SECTION_NAMES = ['About', 'Skills', 'Projects', 'Experience', 'Services', 'Contact'];
 
   // Preloaded image objects and loading flags
   const images = new Array(TOTAL_FRAMES + 1);
@@ -125,13 +130,33 @@
     }
   }
 
-  // Update opacity and translation of the 6 sections based on current scroll progress
+  // Update opacity, scale, and translation of the 6 sections plus scroll indicators
   function updateSections() {
+    // 1. Top progress bar
+    if (progressBar) {
+      progressBar.style.width = (currentProgress * 100).toFixed(2) + '%';
+    }
+
+    // 2. Section 1 scroll cue indicator (fades out as user scrolls past first few percent)
+    if (scrollCue) {
+      const cueOpacity = Math.max(0, 1 - (currentProgress / 0.035));
+      scrollCue.style.opacity = cueOpacity.toFixed(3);
+      scrollCue.style.transform = `translateY(${(currentProgress * 30).toFixed(1)}px)`;
+      scrollCue.style.pointerEvents = cueOpacity > 0.05 ? 'auto' : 'none';
+    }
+
     if (SECTION_COUNT <= 1) return;
 
     const norm = currentProgress * (SECTION_COUNT - 1);
-    const closestIdx = Math.round(norm);
+    const closestIdx = Math.min(SECTION_COUNT - 1, Math.max(0, Math.round(norm)));
 
+    // 3. Update HUD counter & section title
+    if (hudCurrent && hudName) {
+      hudCurrent.textContent = String(closestIdx + 1).padStart(2, '0');
+      hudName.textContent = SECTION_NAMES[closestIdx] || `Phase ${closestIdx + 1}`;
+    }
+
+    // 4. Smooth cubic cross-fade & scale for each section
     sections.forEach((sec, idx) => {
       const diff = norm - idx;
       const dist = Math.abs(diff);
@@ -141,9 +166,10 @@
         const t = dist / 0.75;
         const opacity = Math.max(0, 1 - (t * t * (3 - 2 * t)));
         const translateY = diff * 28;
+        const scale = 0.97 + (0.03 * opacity);
 
         sec.style.opacity = opacity.toFixed(3);
-        sec.style.transform = `translateY(${translateY.toFixed(1)}px)`;
+        sec.style.transform = `translateY(${translateY.toFixed(1)}px) scale(${scale.toFixed(3)})`;
         sec.style.visibility = opacity > 0.01 ? 'visible' : 'hidden';
         sec.style.pointerEvents = opacity > 0.6 ? 'auto' : 'none';
       } else {
